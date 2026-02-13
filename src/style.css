@@ -1,39 +1,120 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+/* Google Fonts ulanishi - dizaynni professional ko'rsatadi */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #2563eb;
+    --dark-bg: #1e293b;
+    --light-bg: #f8fafc;
+    --text-color: #334155;
+    --white: #ffffff;
+}
+
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header va Navigatsiya */
 header {
-    background: #2c3e50;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
 nav a {
-    color: #fff;
-    margin: 0 15px;
+    color: var(--white);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
 }
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Asosiy qismlar */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
+
+section {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    color: var(--dark-bg);
+    margin-bottom: 1.5rem;
+}
+
+/* Blog postlari uchun (Scenario 1 talabi) */
 .blog-post {
-    background: #f4f4f4;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
 }
+
+.blog-post h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Kontakt formasi (Scenario 1 talabi) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 3rem 0;
+    background: var(--dark-bg);
+    color: var(--white);
+    margin-top: 4rem;
 }
