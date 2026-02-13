@@ -2,7 +2,7 @@ name: Deploy Portfolio
 
 on:
   push:
-    [cite_start]branches: [ "main", "development" ] # Qaysi branchga push bo'lganda ishga tushishi 
+    branches: [ "main", "development" ]
 
 permissions:
   contents: read
@@ -22,7 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          [cite_start]path: './src' # Sayt kodlari joylashgan papka 
+          path: './src'
 
       - name: Deploy to GitHub Pages
         id: deployment
